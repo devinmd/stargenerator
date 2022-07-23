@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="index.js"></script>
+
+    <title>Star Generator</title>
+</head>
+
+<body>
+    <div id='settings'>
+        <a href="https://github.com/devinmd/stargenerator" style=" margin-bottom: 8px; display: block;">github.com/devinmd/stargenerator</a>
+        <button onclick='gen()'>Generate</button>
+        <button onclick='toggleColor()'>Toggle Map</button>
+        <br>
+        <br>
+
+        <h4 id='boxdisplay'>Boxes: 15</h4>
+        <input type="range" min="1" max="200" value="15" id='boxslide' onchange="gen()">
+        <br>
+
+        <h4 id='stardisplay'>Stars Per Box: 10</h4>
+        <input type="range" min="1" max="200" value="10" id='starslide' onchange="gen()">
+        <br>
+
+        <h4 id='smallstardisplay'>Small Stars Per Box: 20</h4>
+        <input type="range" min="1" max="500" value="20" id='smallstarslide' onchange="gen()">
+        <br>
+        <h4 id='fillerdisplay'>Filler Stars: 100</h4>
+        <input type="range" min="0" max="2000" value="100" id='fillerslide' onchange="gen()">
+        <br>
+        <br>
+        <button onclick='defaults()'>Reset to Default Settings</button>
+    </div>
+    <canvas id='canv0'></canvas>
+    <canvas id='canv1'></canvas>
+
+    <script>gen()</script>
+
+</body>
+
+</html>
