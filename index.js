@@ -7,39 +7,10 @@ var fillerCount = 100
 var starCount = 10
 var smallstarCount = 20
 
-function defaults(){
-    document.getElementById('boxslide').value = 15
-    boxCount = 15
-    document.getElementById('boxdisplay').innerHTML = 'Boxes: ' + boxCount
-    document.getElementById('starslide').value = 10
-    starCount = 10
-    document.getElementById('stardisplay').innerHTML = 'Stars Per Box: ' + starCount
-    document.getElementById('smallstarslide').value = 20
-    smallstarCount = 20
-    document.getElementById('smallstardisplay').innerHTML = 'Small Stars Per Box: ' + smallstarCount
-    document.getElementById('fillerslide').value = 100
-    fillerCount = 100
-    document.getElementById('fillerdisplay').innerHTML = 'Filler Stars: ' + fillerCount
-}
-
 function gen() {
-
-    document.getElementById('boxslide').oninput = function () {
-        boxCount = this.value
-        document.getElementById('boxdisplay').innerHTML = 'Boxes: ' + boxCount
-    }
-    document.getElementById('starslide').oninput = function () {
-        starCount = this.value
-        document.getElementById('stardisplay').innerHTML = 'Stars Per Box: ' + starCount
-    }
-    document.getElementById('smallstarslide').oninput = function () {
-        smallstarCount = this.value
-        document.getElementById('smallstardisplay').innerHTML = 'Small Stars Per Box: ' + smallstarCount
-    }
-    document.getElementById('fillerslide').oninput = function () {
-        fillerCount = this.value
-        document.getElementById('fillerdisplay').innerHTML = 'Filler Stars: ' + fillerCount
-    }
+        
+        
+   
 
     //setting up canvas
     var canvas0 = document.getElementById('canv0');
