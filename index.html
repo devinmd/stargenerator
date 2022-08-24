@@ -22,21 +22,18 @@
         <br>
 
         <h4 id='boxdisplay'>Boxes: 15</h4>
-        <input type="range" min="1" max="200" value="15" id='boxslide' oninput="gen()">
+        <input type="range" min="1" max="200" value="15" id='boxslide' oninput="boxCount = this.value; gen(); document.getElementById('boxdisplay').innerHTML = 'Boxes: ' + boxCount">
         <br>
 
         <h4 id='stardisplay'>Stars Per Box: 10</h4>
-        <input type="range" min="1" max="200" value="10" id='starslide' oninput="gen()">
+        <input type="range" min="1" max="200" value="10" id='starslide' oninput="starCount = this.value; gen(); document.getElementById('stardisplay').innerHTML = 'Stars Per Box: ' + starCount">
         <br>
 
         <h4 id='smallstardisplay'>Small Stars Per Box: 20</h4>
-        <input type="range" min="1" max="500" value="20" id='smallstarslide' oninput="gen()">
+        <input type="range" min="1" max="500" value="20" id='smallstarslide' oninput="smallstarCount = this.value; gen(); document.getElementById('smallstardisplay').innerHTML = 'Small Stars Per Box: ' + smallstarCount">
         <br>
         <h4 id='fillerdisplay'>Filler Stars: 100</h4>
-        <input type="range" min="0" max="2000" value="100" id='fillerslide' oninput="gen()">
-        <br>
-        <br>
-        <button onclick='defaults()'>Reset to Default Settings</button>
+        <input type="range" min="0" max="2000" value="100" id='fillerslide' oninput="fillerCount = this.value; gen(); document.getElementById('fillerdisplay').innerHTML = 'Filler Stars: ' + fillerCount">
     </div>
     <canvas id='canv0'></canvas>
     <canvas id='canv1'></canvas>
